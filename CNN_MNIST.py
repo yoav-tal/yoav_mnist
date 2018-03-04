@@ -21,7 +21,7 @@ batch_size = 128
 n_epochs = 20
 n_train = 60000
 n_test = 10000
-MNIST = False
+MNIST = True
 
 # convolution layer parameters
 n_filters = 5
@@ -63,7 +63,7 @@ preds = tf.nn.softmax(logits)
 correct_preds = tf.equal(tf.argmax(preds, 1), tf.argmax(label, 1))
 accuracy = tf.reduce_sum(tf.cast(correct_preds, tf.float32))
 
-writer = tf.summary.FileWriter('./graphs/logreg', tf.get_default_graph())
+#writer = tf.summary.FileWriter('./graphs/logreg', tf.get_default_graph())
 with tf.Session() as sess:
 
     start_time = time.time()
@@ -97,4 +97,4 @@ with tf.Session() as sess:
         pass
 
     print('Accuracy {0}'.format(total_correct_preds/n_test))
-writer.close()
+#writer.close()
