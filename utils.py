@@ -131,7 +131,7 @@ def read_mnist(path, flatten=True, num_train=55000):
 
 def get_mnist_dataset(batch_size, MNIST = True):
     # Step 1: Read in data
-    mnist_folder = '/input/yoav_mnist/data/mnist'
+    mnist_folder = '/input/yoav_mnist/mnist'
     if MNIST == False:
         mnist_folder = 'data/notMNIST'
 
